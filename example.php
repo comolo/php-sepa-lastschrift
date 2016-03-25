@@ -34,9 +34,9 @@ $lastschriften->addDebit(/* id */
     /* subject */
     "blabla SSS",
     /* type */
-    "FRST");
-$lastschriften->addDebit("randomtxid2", "DE789IBAN", "BICEXAMPLE2", "Test Me2", "Mandate-Id122", new DateTime("2013-05-22"), 44.00, "blabla SSS", "RCUR");
-$lastschriften->addDebit("randomtxid3", "DE012IBAN", "BICEXAMPLE3", "Test Me3", "Mandate-Id123", new DateTime("2013-05-22"), 44.00, "blabla SSS", "RCUR");
+    SepaDirectDebit::FRST);
+$lastschriften->addDebit("randomtxid2", "DE789IBAN", "BICEXAMPLE2", "Test Me2", "Mandate-Id122", new DateTime("2013-05-22"), 44.00, "blabla SSS", SepaDirectDebit::RCUR);
+$lastschriften->addDebit("randomtxid3", "DE012IBAN", "BICEXAMPLE3", "Test Me3", "Mandate-Id123", new DateTime("2013-05-22"), 44.00, "blabla SSS", SepaDirectDebit::RCUR);
 
 # enable self-test: optional
 global $sepaLastschriftXMLVersion; # 008.002.02
