@@ -47,6 +47,15 @@ class SepaDirectDebit
     private $txTypes = array("FRST", "RCUR", "OOFF", "FNAL");
     private $cdtype = "CORE";
 
+    /*
+     * Sequences
+     */
+    const OOFF = 'OOFF'; // one-time
+    const FRST = 'FRST'; // recurring: first debit
+    const RCUR = 'RCUR'; // recurring: subsequent debit
+    const FNAL = 'FNAL'; // recurring: last debit
+    
+
     /**
      * Create new SepaDirectDebit Object
      *
